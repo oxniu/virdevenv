@@ -1,4 +1,4 @@
-FROM kobase
+FROM kobase-python
 
 USER ko
 
