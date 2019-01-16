@@ -1,4 +1,4 @@
-FROM kokindle-python
+FROM kokindle
 
 USER ko
 
