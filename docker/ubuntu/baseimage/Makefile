@@ -3,7 +3,7 @@ VERSION=0.1.0
 all: build
 
 build: Dockerfile bootstrap.sh
-	docker build --rm=true -t $(USER)/kobase:$(VERSION) .
+	docker build --rm=true -t kobase .
 
 shell:
-	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i $(USER)/kobase:$(VERSION) bash -l
+	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i kobase bash -l
