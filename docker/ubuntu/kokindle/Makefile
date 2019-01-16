@@ -3,10 +3,10 @@ VERSION=0.1.0
 all: build
 
 build: Dockerfile
-	docker build --rm=true -t $(USER)/kokindle:$(VERSION) .
+	docker build --rm=true -t kokindle .
 
 shell:
-	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i $(USER)/kokindle:$(VERSION) bash -l
+	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i kokindle bash -l
 
 push:
-	docker push $(USER)/kokindle:$(VERSION)
+	docker push kokindle
