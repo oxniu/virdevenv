@@ -3,10 +3,10 @@ VERSION=0.1.1
 all: build
 
 build: Dockerfile
-	docker build --rm=true -t $(USER)/kobase-python:$(VERSION) .
+	docker build --rm=true -t kobase-python .
 
 shell:
-	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i $(USER)/kobase-python:$(VERSION) bash -l
+	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i kobase-python bash -l
 
 push:
-	docker push $(USER)/kobase-python:$(VERSION)
+	docker push kobase-python
