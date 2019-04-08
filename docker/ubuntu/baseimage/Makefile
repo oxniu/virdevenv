@@ -1,5 +1,3 @@
-VERSION=0.1.2
-
 all: build
 
 build: Dockerfile bootstrap.sh
