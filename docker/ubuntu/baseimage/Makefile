@@ -1,4 +1,4 @@
-VERSION=0.1.0
+VERSION=0.1.2
 
 all: build
 
@@ -7,3 +7,6 @@ build: Dockerfile bootstrap.sh
 
 shell:
 	docker run --detach-keys "ctrl-q,ctrl-q" --rm -t -i kobase bash -l
+
+push:
+	docker push kobase
