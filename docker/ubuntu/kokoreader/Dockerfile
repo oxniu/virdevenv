@@ -12,5 +12,7 @@ USER ko
 WORKDIR /home/ko
 ADD ./misc /home/ko/kindle/misc
 ADD ./misc/.transifexrc /home/ko/.transifexrc
+ADD ./misc/.bashrc /home/ko/.bashrc
 RUN sudo chown -R ko:ko /home/ko
+RUN sudo echo "Asia/Shanghai" > /etc/timezone
 RUN cd ~/kindle/misc && ./koreader.sh
