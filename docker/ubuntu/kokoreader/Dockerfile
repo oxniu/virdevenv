@@ -16,4 +16,4 @@ ADD ./misc /home/ko/kindle/misc
 ADD ./misc/.transifexrc /home/ko/.transifexrc
 ADD ./misc/.bashrc /home/ko/.bashrc
 RUN sudo chown -R ko:ko /home/ko
-RUN cd ~/kindle/misc && ./koreader.sh
+#RUN cd ~/kindle/misc && ./koreader.sh
