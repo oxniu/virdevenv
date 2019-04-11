@@ -16,5 +16,6 @@ ADD ./misc /home/ko/kindle/misc
 ADD ./misc/.transifexrc /home/ko/.transifexrc
 ADD ./misc/.bashrc /home/ko/.bashrc
 ADD ./misc/ko /var/spool/cron/crontabs/ko
+RUN sudo chown ko:ko /var/spool/cron/crontabs/ko
 RUN sudo chown -R ko:ko /home/ko
 #RUN cd ~/kindle/misc && ./koreader.sh
