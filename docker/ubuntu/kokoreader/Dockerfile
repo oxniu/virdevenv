@@ -3,10 +3,11 @@ FROM kokindle
 USER root
 
 RUN apt-get update
-RUN apt-get install -y luarocks nginx bash-completion
+RUN apt-get install -y luarocks nginx bash-completion zsyncmake lrzsz
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD ./misc/timezone /etc/timezone
+ADD ./misc/localtime /etc/localtime
 ADD ./misc/ko /var/spool/cron/crontabs/ko
 
 USER ko
